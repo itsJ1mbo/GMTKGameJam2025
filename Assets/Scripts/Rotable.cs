@@ -17,18 +17,19 @@ public class RotationComponent : MonoBehaviour
     private GameObject centerRoom;
 
     private float amountRotated = 0.0f;
-    private bool isRotating = false;
     private int rotationDirection;
     private Collider[] facesToRotate;
+    private bool isFaceRotating = false;
     
-    public bool rotate = false;
+    //booleano para testear rapido
+    //public bool rotate = false;
     
     void Update()
     {
-        if(rotate)
-            Rotate();
+        /*if (rotate)
+            Rotate();*/
         
-        if (isRotating)
+        if (isFaceRotating) //tiene que ser especificamente esta cara la que este rotando para aplicar esto
         {
             foreach (Collider face in facesToRotate)
             {
@@ -38,17 +39,19 @@ public class RotationComponent : MonoBehaviour
             if (amountRotated >= rotationAngle)
             {
                 amountRotated = 0;
-                isRotating = false;
+                isFaceRotating = false;
+                GameManager.Instance.setCubeRotation(false);
             }
         }   
     }
     public void Rotate()
     {
-        if (!isRotating)
+        if (!GameManager.Instance.isCubeRotating())
         {
+            //rotate = false;
+            isFaceRotating = true;
             CheckCurrentFaces();
-            rotate = false;
-            isRotating = true;
+            GameManager.Instance.setCubeRotation(true);
             rotationDirection = rotateClockwise ? 1 : -1;
         }
     }
