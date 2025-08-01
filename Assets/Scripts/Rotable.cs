@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class RotationComponent : MonoBehaviour
 {
+    private CubeManager cubeManager;
+    
     [SerializeField][Tooltip("Direccion de rotacion en sentido de las agujas del reloj")]
     private bool rotateClockwise = true;
     [SerializeField]
@@ -23,7 +25,12 @@ public class RotationComponent : MonoBehaviour
     
     //booleano para testear rapido
     //public bool rotate = false;
-    
+
+    private void Start()
+    {
+        cubeManager = transform.parent.GetComponent<CubeManager>();
+    }
+
     void Update()
     {
         /*if (rotate)
@@ -40,18 +47,18 @@ public class RotationComponent : MonoBehaviour
             {
                 amountRotated = 0;
                 isFaceRotating = false;
-                GameManager.Instance.setCubeRotation(false);
+                cubeManager.setCubeRotation(false);
             }
         }   
     }
     public void Rotate()
     {
-        if (!GameManager.Instance.isCubeRotating())
+        if (!cubeManager.isCubeRotating())
         {
             //rotate = false;
             isFaceRotating = true;
             CheckCurrentFaces();
-            GameManager.Instance.setCubeRotation(true);
+            cubeManager.setCubeRotation(true);
             rotationDirection = rotateClockwise ? 1 : -1;
         }
     }

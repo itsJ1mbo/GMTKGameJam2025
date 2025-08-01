@@ -161,4 +161,4 @@ MonoBehaviour:
   _interactionDistance: 10
   _layers:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
