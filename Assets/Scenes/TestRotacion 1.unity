@@ -750,11 +750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8462aa694e331c46974872cabe9264b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeManager: {fileID: 0}
   rotateClockwise: 1
   rotationAngle: 90
   rotationSpeed: 50
-  rotationAxis: {x: 0, y: 1, z: 0}
   halfExtents: {x: 1, y: 0, z: 1}
   centerRoom: {fileID: 1411118318}
 --- !u!1 &459407836
@@ -1057,11 +1055,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8462aa694e331c46974872cabe9264b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeManager: {fileID: 0}
-  rotateClockwise: 0
+  rotateClockwise: 1
   rotationAngle: 90
   rotationSpeed: 50
-  rotationAxis: {x: 0, y: 0, z: 1}
   halfExtents: {x: 1, y: 1, z: 0}
   centerRoom: {fileID: 1411118318}
 --- !u!1 &587355859
@@ -1108,12 +1104,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8462aa694e331c46974872cabe9264b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeManager: {fileID: 0}
   rotateClockwise: 1
   rotationAngle: 90
   rotationSpeed: 50
-  rotationAxis: {x: 0, y: 1, z: 0}
-  halfExtents: {x: 1, y: 0, z: 1}
+  halfExtents: {x: 0.07, y: 0, z: 0.07}
   centerRoom: {fileID: 273692445}
 --- !u!1 &595053172
 GameObject:
@@ -2043,8 +2037,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760599545}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.14209582, y: 0.64939296, z: -0.08680334, w: 0.7419992}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0.14693117, y: 0.6916728, z: -0.078342065, w: 0.70275354}
+  m_LocalPosition: {x: 0.05, y: -0.043, z: 0}
   m_LocalScale: {x: 0.04, y: 0.040000003, z: 0.039999995}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -2067,7 +2061,7 @@ Transform:
   - {fileID: 789471342}
   - {fileID: 661203639}
   m_Father: {fileID: 1002435738}
-  m_LocalEulerAnglesHint: {x: -5.632, y: 83.295, z: -18.354}
+  m_LocalEulerAnglesHint: {x: -5.632, y: 90, z: -18.354}
 --- !u!114 &760599547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2340,12 +2334,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8462aa694e331c46974872cabe9264b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cubeManager: {fileID: 0}
-  rotateClockwise: 0
+  rotateClockwise: 1
   rotationAngle: 90
   rotationSpeed: 50
-  rotationAxis: {x: 0, y: 0, z: 1}
-  halfExtents: {x: 1, y: 1, z: 0}
+  halfExtents: {x: 0.07, y: 0.07, z: 0}
   centerRoom: {fileID: 273692445}
 --- !u!1 &929309353
 GameObject:
@@ -4536,7 +4528,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.40723, y: -3.46, z: 1.12021}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
