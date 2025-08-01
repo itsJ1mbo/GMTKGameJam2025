@@ -22,9 +22,11 @@ public class RotationComponent : MonoBehaviour
     private int rotationDirection;
     private Collider[] facesToRotate;
     private bool isFaceRotating = false;
+    private Vector3 finalRotation;
+    
     //booleano para testear rapido
     //public bool rotate = false;
-
+    
     private void Start()
     {
         cubeManager = transform.parent.GetComponent<CubeManager>();
@@ -44,9 +46,14 @@ public class RotationComponent : MonoBehaviour
             amountRotated += rotationSpeed * Time.deltaTime;
             if (amountRotated >= rotationAngle)
             {
-                amountRotated = 0;
                 isFaceRotating = false;
                 cubeManager.setCubeRotation(false);
+                //el snapeo a un angulo mas feo que jamas vera nadie
+                foreach (Collider face in facesToRotate)
+                {
+                    face.transform.RotateAround(centerRoom.transform.position, (transform.position - centerRoom.transform.position).normalized, -rotationDirection * (amountRotated-rotationAngle));
+                }
+                amountRotated = 0;
             }
         }   
     }
@@ -59,6 +66,11 @@ public class RotationComponent : MonoBehaviour
             CheckCurrentFaces();
             cubeManager.setCubeRotation(true);
             rotationDirection = rotateClockwise ? 1 : -1;
+            
+            //calculo de la rotacion final
+            Debug.Log(transform.rotation.eulerAngles);
+            finalRotation = transform.rotation.eulerAngles + (transform.position - centerRoom.transform.position).normalized * rotationAngle * rotationDirection;
+            Debug.Log(finalRotation);
         }
     }
 
