@@ -68,9 +68,7 @@ public class RotationComponent : MonoBehaviour
             rotationDirection = rotateClockwise ? 1 : -1;
             
             //calculo de la rotacion final
-            Debug.Log(transform.rotation.eulerAngles);
             finalRotation = transform.rotation.eulerAngles + (transform.position - centerRoom.transform.position).normalized * rotationAngle * rotationDirection;
-            Debug.Log(finalRotation);
         }
     }
 
