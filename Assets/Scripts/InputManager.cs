@@ -13,12 +13,14 @@ public class InputManager : MonoBehaviour
     public event Action<InputAction.CallbackContext> OnLook;
     public event Action<InputAction.CallbackContext> OnLookStop;
     public event Action<InputAction.CallbackContext> OnInteract;
+    public event Action<InputAction.CallbackContext> OnMap;
 
     private void OnMovementPerformed(InputAction.CallbackContext ctx) => OnMovement?.Invoke(ctx);
     private void OnMovementCanceled(InputAction.CallbackContext ctx) => OnMoveStop?.Invoke(ctx);
     private void OnLookPerformed(InputAction.CallbackContext ctx) => OnLook?.Invoke(ctx);
     private void OnLookCanceled(InputAction.CallbackContext ctx) => OnLookStop?.Invoke(ctx);
     private void OnInteractPerformed(InputAction.CallbackContext ctx) => OnInteract?.Invoke(ctx);
+    private void OnMapUsed(InputAction.CallbackContext ctx) => OnMap?.Invoke(ctx);
     
     public void EnablePlayerInput()
     {
@@ -29,7 +31,7 @@ public class InputManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        if (Instance == null)
+        if (!Instance)
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
@@ -52,6 +54,8 @@ public class InputManager : MonoBehaviour
         
         _inputActions.Player.Interact.performed += OnInteractPerformed;
         
+        _inputActions.Player.Map.performed += OnMapUsed;
+        
         EnablePlayerInput();
     }
 
@@ -64,6 +68,8 @@ public class InputManager : MonoBehaviour
         _inputActions.Player.Look.canceled -= OnLookCanceled;
         
         _inputActions.Player.Interact.performed -= OnInteractPerformed;
+        
+        _inputActions.Player.Map.performed -= OnMapUsed;
         
         _inputActions.Disable();
         
