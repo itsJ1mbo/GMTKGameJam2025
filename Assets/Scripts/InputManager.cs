@@ -15,6 +15,7 @@ public class InputManager : MonoBehaviour
     public event Action<InputAction.CallbackContext> OnInteract;
     public event Action<InputAction.CallbackContext> OnMap;
     public event Action<InputAction.CallbackContext> OnJump;
+    public event Action<InputAction.CallbackContext> OnRestart;
 
     private void OnMovementPerformed(InputAction.CallbackContext ctx) => OnMovement?.Invoke(ctx);
     private void OnMovementCanceled(InputAction.CallbackContext ctx) => OnMoveStop?.Invoke(ctx);
@@ -23,6 +24,7 @@ public class InputManager : MonoBehaviour
     private void OnInteractPerformed(InputAction.CallbackContext ctx) => OnInteract?.Invoke(ctx);
     private void OnMapUsed(InputAction.CallbackContext ctx) => OnMap?.Invoke(ctx);
     private void OnJumpPreformed(InputAction.CallbackContext ctx) => OnJump?.Invoke(ctx);
+    private void OnPlayerRestart(InputAction.CallbackContext ctx) => OnRestart?.Invoke(ctx);
     
     public void EnablePlayerInput()
     {
@@ -60,6 +62,8 @@ public class InputManager : MonoBehaviour
         
         _inputActions.Player.Jump.performed += OnJumpPreformed;
         
+        _inputActions.Player.Restart.performed += OnPlayerRestart;
+        
         EnablePlayerInput();
     }
 
@@ -76,6 +80,8 @@ public class InputManager : MonoBehaviour
         _inputActions.Player.Map.performed -= OnMapUsed;
         
         _inputActions.Player.Jump.performed -= OnJumpPreformed;
+        
+        _inputActions.Player.Restart.performed -= OnPlayerRestart;
         
         _inputActions.Disable();
         

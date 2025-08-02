@@ -39,6 +39,11 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
+        if (_isGrounded && _velocity.y < 0f)
+        {
+            _velocity.y = -2f;
+        }
+        
         if (_jumpInput && _isGrounded)
         {
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity * _gravityScale);
@@ -50,6 +55,6 @@ public class PlayerJump : MonoBehaviour
 
         _controller.Move(_velocity * Time.deltaTime);
         
-        _isGrounded = Physics.CheckBox(_feet.position, new Vector3(0.5f, 0.5f, 0.5f), _feet.rotation, _groundMask);
+        _isGrounded = Physics.CheckBox(_feet.position, new Vector3(0.1f, 0.1f, 0.1f), _feet.rotation, _groundMask);
     }
 }
