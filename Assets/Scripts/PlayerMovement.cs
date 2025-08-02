@@ -62,10 +62,10 @@ public class PlayerMovement : MonoBehaviour
         
         _controller.Move(_dir * (Time.deltaTime * _speed));
         
-        if(!_controller.isGrounded)
-        {
-            _velocity.y += _gravity * Time.deltaTime;
-            _controller.Move(_velocity * Time.deltaTime);
-        }
+        // if(!_controller.isGrounded)
+        // {
+        //     _velocity.y += _gravity * Time.deltaTime;
+        //     _controller.Move(_velocity * Time.deltaTime);
+        // }
     }
 }
