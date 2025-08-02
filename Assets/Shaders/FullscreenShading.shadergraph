@@ -4,12 +4,6 @@
     "m_ObjectId": "38e373a19e2947f397553408270923a6",
     "m_Properties": [
         {
-            "m_Id": "0b727617072d4532a2cb484d95a99163"
-        },
-        {
-            "m_Id": "c1b4f07486324730aaf390f63cbd780f"
-        },
-        {
             "m_Id": "f571ca8c3aed4a968e751706f9daa299"
         },
         {
@@ -817,99 +811,6 @@
         "e31": 0.0,
         "e32": 0.0,
         "e33": 1.0
-    }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.GradientShaderProperty",
-    "m_ObjectId": "0b727617072d4532a2cb484d95a99163",
-    "m_Guid": {
-        "m_GuidSerialized": "3f9c5488-ab55-4384-9a1a-19cc2716a08b"
-    },
-    "m_Name": "Gradient (1)",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Gradient (1)",
-    "m_DefaultReferenceName": "_Gradient_1",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": false,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "serializedVersion": "2",
-        "key0": {
-            "r": 0.041509389877319339,
-            "g": 0.041509389877319339,
-            "b": 0.041509389877319339,
-            "a": 1.0
-        },
-        "key1": {
-            "r": 0.20000000298023225,
-            "g": 0.20000000298023225,
-            "b": 0.20000000298023225,
-            "a": 1.0
-        },
-        "key2": {
-            "r": 0.4000000059604645,
-            "g": 0.4000000059604645,
-            "b": 0.4000000059604645,
-            "a": 0.0
-        },
-        "key3": {
-            "r": 0.6000000238418579,
-            "g": 0.6000000238418579,
-            "b": 0.6000000238418579,
-            "a": 0.0
-        },
-        "key4": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0,
-            "a": 0.0
-        },
-        "key5": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "key6": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "key7": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "ctime0": 13107,
-        "ctime1": 26214,
-        "ctime2": 39321,
-        "ctime3": 52428,
-        "ctime4": 65535,
-        "ctime5": 0,
-        "ctime6": 0,
-        "ctime7": 0,
-        "atime0": 0,
-        "atime1": 65535,
-        "atime2": 0,
-        "atime3": 0,
-        "atime4": 0,
-        "atime5": 0,
-        "atime6": 0,
-        "atime7": 0,
-        "m_Mode": 1,
-        "m_ColorSpace": 1,
-        "m_NumColorKeys": 5,
-        "m_NumAlphaKeys": 2
     }
 }
 
@@ -3080,12 +2981,6 @@
     "m_Name": "",
     "m_ChildObjectList": [
         {
-            "m_Id": "c1b4f07486324730aaf390f63cbd780f"
-        },
-        {
-            "m_Id": "0b727617072d4532a2cb484d95a99163"
-        },
-        {
             "m_Id": "f571ca8c3aed4a968e751706f9daa299"
         },
         {
@@ -3468,99 +3363,6 @@
         "y": 0.0,
         "z": 0.0,
         "w": 0.0
-    }
-}
-
-{
-    "m_SGVersion": 0,
-    "m_Type": "UnityEditor.ShaderGraph.GradientShaderProperty",
-    "m_ObjectId": "c1b4f07486324730aaf390f63cbd780f",
-    "m_Guid": {
-        "m_GuidSerialized": "a55e28d1-fc03-4de8-bbad-88074743f8a5"
-    },
-    "m_Name": "Gradient",
-    "m_DefaultRefNameVersion": 1,
-    "m_RefNameGeneratedByDisplayName": "Gradient",
-    "m_DefaultReferenceName": "_Gradient",
-    "m_OverrideReferenceName": "",
-    "m_GeneratePropertyBlock": false,
-    "m_UseCustomSlotLabel": false,
-    "m_CustomSlotLabel": "",
-    "m_DismissedVersion": 0,
-    "m_Precision": 0,
-    "overrideHLSLDeclaration": false,
-    "hlslDeclarationOverride": 0,
-    "m_Hidden": false,
-    "m_Value": {
-        "serializedVersion": "2",
-        "key0": {
-            "r": 0.800000011920929,
-            "g": 0.800000011920929,
-            "b": 0.800000011920929,
-            "a": 1.0
-        },
-        "key1": {
-            "r": 0.6000000238418579,
-            "g": 0.6000000238418579,
-            "b": 0.6000000238418579,
-            "a": 1.0
-        },
-        "key2": {
-            "r": 0.4000000059604645,
-            "g": 0.4000000059604645,
-            "b": 0.4000000059604645,
-            "a": 0.0
-        },
-        "key3": {
-            "r": 0.20000000298023225,
-            "g": 0.20000000298023225,
-            "b": 0.20000000298023225,
-            "a": 0.0
-        },
-        "key4": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "key5": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "key6": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "key7": {
-            "r": 0.0,
-            "g": 0.0,
-            "b": 0.0,
-            "a": 0.0
-        },
-        "ctime0": 13107,
-        "ctime1": 26214,
-        "ctime2": 39321,
-        "ctime3": 52428,
-        "ctime4": 65535,
-        "ctime5": 0,
-        "ctime6": 0,
-        "ctime7": 0,
-        "atime0": 0,
-        "atime1": 65535,
-        "atime2": 0,
-        "atime3": 0,
-        "atime4": 0,
-        "atime5": 0,
-        "atime6": 0,
-        "atime7": 0,
-        "m_Mode": 1,
-        "m_ColorSpace": 1,
-        "m_NumColorKeys": 5,
-        "m_NumAlphaKeys": 2
     }
 }
 
