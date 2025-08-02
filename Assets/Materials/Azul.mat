@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Azul
-  m_Shader: {fileID: -6465566751694194690, guid: abe27daa89918ed4680fb021f506ebf8, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b4dfbeb6912fbc843a7ce2e3cc3507cf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,6 +37,14 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Mask_R_Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -105,7 +113,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_088a634488c746ec8e51cda7dc2617b6_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 14af5334c16af0d42bdfa208f697e36c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_2d1c6c9914cd4252986209831093cde0_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_63da592859834f449d6ac8f45f064310_Out_0_Texture2D:
         m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -127,9 +143,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - Brightness_Rim: 4.02
+    - Rim_Power: 8.8
+    - Toon_Ramp_Offset: 0.5
+    - Toon_Ramp_Smoothness: 0.5
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
+    - _Ambient: -1.17
     - _Blend: 250
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
@@ -164,17 +185,20 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
+    - _Toon_Ramp_Offset_Point: 1
     - _WorkflowMode: 1
     - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
+    - Toon_Ramp_Tint: {r: 0, g: 0, b: 0, a: 1}
     - _BaseColor: {r: 0, g: 0.34151268, b: 1, a: 1}
-    - _Color: {r: 0, g: 0.34151265, b: 1, a: 1}
+    - _Color: {r: 0, g: 0.45839047, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Luminance: {r: 0.2126, g: 0.7152, b: 0.0722, a: 0}
     - _Offset: {r: 0, g: 0, b: 0, a: 0}
     - _Shading_Color: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 0.5, g: 0.5, b: 0, a: 0}
+    - _safasfafa: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

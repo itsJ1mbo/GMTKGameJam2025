@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Rojo
-  m_Shader: {fileID: -6465566751694194690, guid: abe27daa89918ed4680fb021f506ebf8, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: b4dfbeb6912fbc843a7ce2e3cc3507cf, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -105,11 +105,23 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_088a634488c746ec8e51cda7dc2617b6_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: 14af5334c16af0d42bdfa208f697e36c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_2d1c6c9914cd4252986209831093cde0_Out_0_Texture2D:
         m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_63da592859834f449d6ac8f45f064310_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_7f69743a537e48b580f97cc515b0fe6b_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_84b47674f0db45138a7d44558790e112_Out_0_Texture2D:
         m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
