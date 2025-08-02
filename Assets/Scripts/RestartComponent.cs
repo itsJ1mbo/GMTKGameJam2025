@@ -32,7 +32,6 @@ public class RestartComponent : MonoBehaviour
 
         if (_isOutside)
         {
-            Debug.Log("Outside");
             _player.GetComponent<CharacterController>().enabled = false;
             _player.transform.position = _spawn.position;
             _player.GetComponent<CharacterController>().enabled = true;
