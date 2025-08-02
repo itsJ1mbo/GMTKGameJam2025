@@ -1,79 +1,26 @@
-using System;
 using UnityEngine;
 
 public class RotationComponent : MonoBehaviour
 {
-    
-    [SerializeField][Tooltip("Direccion de rotacion en sentido de las agujas del reloj")]
-    private bool rotateClockwise = true;
-    [SerializeField]
-    private float rotationAngle = 90.0f;
-    [SerializeField][Tooltip("Velocidad de rotacion")]
-    private float rotationSpeed = 5.0f;
-    /*[SerializeField][Tooltip("Eje de rotacion")]
-    private Vector3 rotationAxis = Vector3.up;*/
-    [SerializeField][Tooltip("Tamaño overlap")]
-    Vector3 halfExtents = Vector3.zero;
-    [SerializeField]
-    private GameObject centerRoom;
-    
-    private CubeManager cubeManager;
-    private float amountRotated = 0.0f;
-    private int rotationDirection;
-    private Collider[] facesToRotate;
-    private bool isFaceRotating = false;
-    private Vector3 finalRotation;
-    
-    //booleano para testear rapido
-    //public bool rotate = false;
-    
-    private void Start()
-    {
-        cubeManager = transform.parent.GetComponent<CubeManager>();
-    }
+    [Tooltip("El eje del slice a rotar (X, Y o Z)")]
+    public Axis sliceAxis = Axis.Y;
 
-    void Update()
-    {
-        /*if (rotate)
-            Rotate();*/
-        
-        if (isFaceRotating) //tiene que ser especificamente esta cara la que este rotando para aplicar esto
-        {
-            foreach (Collider face in facesToRotate)
-            {
-                face.transform.RotateAround(centerRoom.transform.position, (transform.position - centerRoom.transform.position).normalized, rotationDirection * rotationSpeed * Time.deltaTime);
-            }
-            amountRotated += rotationSpeed * Time.deltaTime;
-            if (amountRotated >= rotationAngle)
-            {
-                isFaceRotating = false;
-                cubeManager.setCubeRotation(false);
-                //el snapeo a un angulo mas feo que jamas vera nadie
-                foreach (Collider face in facesToRotate)
-                {
-                    face.transform.RotateAround(centerRoom.transform.position, (transform.position - centerRoom.transform.position).normalized, -rotationDirection * (amountRotated-rotationAngle));
-                }
-                amountRotated = 0;
-            }
-        }   
-    }
+    [Tooltip("–1 = capa negativa, 0 = interna media, +1 = positiva")]
+    [Range(-1, 1)]
+    public int sliceIndex = 1;
+
+    [Tooltip("Horario o antihorario respecto al eje emergente")]
+    public bool rotateClockwise = true;
+
+    [Tooltip("Referencia a CubeManager (puede autodetectarse)")]
+    public CubeManager cubeManager;
+
+    /// <summary>
+    /// Llama al método de rotación 90° para este slice
+    /// </summary>
     public void Rotate()
     {
-        if (!cubeManager.isCubeRotating())
-        {
-            //rotate = false;
-            isFaceRotating = true;
-            CheckCurrentFaces();
-            cubeManager.setCubeRotation(true);
-            rotationDirection = rotateClockwise ? 1 : -1;
-            
-            //calculo de la rotacion final
-            finalRotation = transform.rotation.eulerAngles + (transform.position - centerRoom.transform.position).normalized * rotationAngle * rotationDirection;
-        }
+        if (cubeManager != null)
+            cubeManager.RotateSlice(sliceAxis, sliceIndex, rotateClockwise);
     }
-
-    void CheckCurrentFaces()
-    {
-        facesToRotate = Physics.OverlapBox(transform.position, halfExtents, transform.rotation, 64, QueryTriggerInteraction.Collide);
-    } 
 }
