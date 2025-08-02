@@ -12,8 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 _movement;
     
     [SerializeField] private float _speed;
-    [SerializeField] private float _gravity = -9.81f;
-
+    
     private Vector3 _dir;
     private Vector3 _velocity;
 
@@ -61,11 +60,5 @@ public class PlayerMovement : MonoBehaviour
         _dir.Normalize();
         
         _controller.Move(_dir * (Time.deltaTime * _speed));
-        
-        // if(!_controller.isGrounded)
-        // {
-        //     _velocity.y += _gravity * Time.deltaTime;
-        //     _controller.Move(_velocity * Time.deltaTime);
-        // }
     }
 }
