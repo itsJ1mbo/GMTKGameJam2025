@@ -20,8 +20,6 @@ public class PlayerInteraction : MonoBehaviour
 
     private void HandleInteract(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Interact");
-        
         // Hacemos un raycast desde la cámara del jugador
         Ray ray = new Ray(_head.position, _head.forward);
         if (!Physics.Raycast(ray, out RaycastHit hit, _interactionDistance, _layers)) return;
