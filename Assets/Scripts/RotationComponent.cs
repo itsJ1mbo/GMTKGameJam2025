@@ -20,6 +20,7 @@ public class RotationComponent : MonoBehaviour
     /// </summary>
     public void Rotate()
     {
+        Debug.Log(name);
         if (cubeManager != null)
             cubeManager.RotateSlice(sliceAxis, sliceIndex, rotateClockwise);
     }

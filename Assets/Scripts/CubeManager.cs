@@ -47,7 +47,7 @@ public class CubeManager : MonoBehaviour
     private IEnumerator RotateSliceRoutine(Axis axis, int layerIndex, bool clockwise)
     {
         cubeRotating = true;
-
+        Debug.Log("Rotating slice " + name);
         List<Transform> slice = FilterSlice(axis, layerIndex);
         GameObject pivot = new GameObject($"SlicePivot_{axis}{layerIndex}");
         pivot.transform.SetParent(transform, worldPositionStays: true);
