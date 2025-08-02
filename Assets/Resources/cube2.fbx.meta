@@ -1,49 +1,9 @@
 fileFormatVersion: 2
-guid: 41040fa0f5e86184dab76b7856fa48a9
+guid: 7d1c663ef2b8e7844a2a62f188874d64
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: be90353d4b00e9d42b4b5aa3cdab3e17, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: atras.001
-    second: {fileID: 2100000, guid: d70d384e50ae68e4a93703908c769ad1, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: centros.001
-    second: {fileID: 2100000, guid: b63e9368f96371341b43a44bbb1cfddb, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: centros.002
-    second: {fileID: 2100000, guid: 233090285973bf448ac35966c5b89f5a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: centros.003
-    second: {fileID: 2100000, guid: f9e5a010df5a07d4984ccd4eb0cc868c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: esquinas.004
-    second: {fileID: 2100000, guid: 9b43e7ecf2eab4143ad097253ec699af, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: frente.001
-    second: {fileID: 2100000, guid: 6d34b6ef0a9031a49ab6a6368f0f70da, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: frente.002
-    second: {fileID: 2100000, guid: 3fe62b14c48c6dc429abfcc66d90c287, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
