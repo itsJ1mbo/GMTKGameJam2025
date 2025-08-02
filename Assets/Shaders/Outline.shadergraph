@@ -530,6 +530,20 @@
         {
             "m_OutputSlot": {
                 "m_Node": {
+                    "m_Id": "486e767235ba417daf412e1c1a64b885"
+                },
+                "m_SlotId": 2
+            },
+            "m_InputSlot": {
+                "m_Node": {
+                    "m_Id": "e249ae457f794555868f24b791aa6520"
+                },
+                "m_SlotId": 0
+            }
+        },
+        {
+            "m_OutputSlot": {
+                "m_Node": {
                     "m_Id": "49d3c9cdc4b24b5b92512f8cdfc5a562"
                 },
                 "m_SlotId": 0
@@ -635,20 +649,6 @@
             "m_InputSlot": {
                 "m_Node": {
                     "m_Id": "a2f685510e7043bf80d02684a4929d23"
-                },
-                "m_SlotId": 0
-            }
-        },
-        {
-            "m_OutputSlot": {
-                "m_Node": {
-                    "m_Id": "8a5a19c3cc96433ca912f2601d177530"
-                },
-                "m_SlotId": 2
-            },
-            "m_InputSlot": {
-                "m_Node": {
-                    "m_Id": "e249ae457f794555868f24b791aa6520"
                 },
                 "m_SlotId": 0
             }
@@ -3319,8 +3319,8 @@
     "m_ObjectId": "736485bd1bf740e9a64a44ab0ae42a68",
     "m_Title": "Normal detection",
     "m_Position": {
-        "x": -3361.600341796875,
-        "y": -109.60009765625
+        "x": -3361.60009765625,
+        "y": -109.5999755859375
     }
 }
 
@@ -4624,7 +4624,7 @@
     "m_ObjectId": "a490d06d5202497ea00a9d96695a62a9",
     "m_Title": "Color Detection",
     "m_Position": {
-        "x": -3439.2001953125,
+        "x": -3439.199951171875,
         "y": 2390.39990234375
     }
 }
