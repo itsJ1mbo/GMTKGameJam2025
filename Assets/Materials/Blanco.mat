@@ -85,6 +85,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Shading_Texture_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Shading_Texture_2:
+        m_Texture: {fileID: 2800000, guid: 14af5334c16af0d42bdfa208f697e36c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -95,6 +103,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Texture2D:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_2d1c6c9914cd4252986209831093cde0_Out_0_Texture2D:
+        m_Texture: {fileID: 2800000, guid: bf6459609d6c8084a82de931550c92e5, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture2DAsset_7f69743a537e48b580f97cc515b0fe6b_Out_0_Texture2D:
@@ -122,7 +134,7 @@ Material:
     - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
-    - _Blend: 1
+    - _Blend: 250
     - _BlendModePreserveSpecular: 1
     - _BumpScale: 1
     - _CastShadows: 1
