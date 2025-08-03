@@ -39,15 +39,20 @@ public class InputManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+                    
+            _inputActions = new InputActions();    
         }
         else
+        {
             Destroy(gameObject);
-        
-        _inputActions = new InputActions();    
+            return;
+        }
     }
 
     private void OnEnable()
     {
+        if (_inputActions == null) return;
+        
         _inputActions.Enable();
         
         _inputActions.Player.Move.performed += OnMovementPerformed;
@@ -69,6 +74,9 @@ public class InputManager : MonoBehaviour
 
     private void OnDisable()
     {
+        if (Instance != this || _inputActions == null) 
+            return;
+        
         _inputActions.Player.Move.performed -= OnMovementPerformed;
         _inputActions.Player.Move.canceled -= OnMovementCanceled;
         

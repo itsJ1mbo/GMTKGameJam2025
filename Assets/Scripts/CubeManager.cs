@@ -34,9 +34,6 @@ public class CubeManager : MonoBehaviour
         }
     }
 
-    public bool isCubeRotating() => cubeRotating && _restrictRotations;
-    public void setCubeRotation(bool onoff) => cubeRotating = onoff;
-
     /// <summary>
     /// Gira 90° el slice definido por (axis, layerIndex).
     /// layerIndex ∈ {-1, 0, +1}. clockwise=true → +90°.
@@ -66,7 +63,6 @@ public class CubeManager : MonoBehaviour
 
         if (slice.Count == 0)
         {
-            Debug.LogWarning($"Slice vacío: {axis}={layerIndex}");
             cubeRotating = false;
             yield break;
         }

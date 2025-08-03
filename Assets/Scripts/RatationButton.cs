@@ -5,8 +5,6 @@ public class RatationButton : MonoBehaviour, IInteractable, ILookAtHandler
 {
     [SerializeField]
     private UnityEvent _onInteract;
-    
-    private bool isLookingAt = false;
 
     [SerializeField]
     private Color interactableColor;
