@@ -55,6 +55,12 @@ public class PlayerJump : MonoBehaviour
 
         _controller.Move(_velocity * Time.deltaTime);
         
-        _isGrounded = Physics.CheckBox(_feet.position, new Vector3(0.1f, 0.1f, 0.1f), _feet.rotation, _groundMask);
+        _isGrounded = Physics.CheckBox(_feet.position, new Vector3(0.25f, 0.1f, 0.25f), _feet.rotation, _groundMask);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawCube(_feet.position, new Vector3(0.5f, 0.2f, 0.5f));
     }
 }
