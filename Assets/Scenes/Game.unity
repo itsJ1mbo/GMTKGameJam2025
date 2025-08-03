@@ -1548,9 +1548,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 720359114}
     m_Modifications:
+    - target: {fileID: 2212777273502219882, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5816592193159808928, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
       propertyPath: m_Name
       value: dog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816592193159808928, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6625779547187551514, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
       propertyPath: m_LocalScale.x
@@ -1604,11 +1612,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7497313539084306880, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5816592193159808928, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5339335803137934922}
+    - targetCorrespondingSourceObject: {fileID: 5816592193159808928, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5339335803137934921}
   m_SourcePrefab: {fileID: 100100000, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+--- !u!1 &5339335803137934920 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5816592193159808928, guid: 2186ef4dba43aeb4eb2b03036af99762, type: 3}
+  m_PrefabInstance: {fileID: 5339335803137934919}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5339335803137934921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339335803137934920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca66e1996301b884ea39ded72e0b4c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5339335803137934922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5339335803137934920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46ee1bedf7ee9ba4485c1712cf3f63a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onInteract:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5339335803137934921}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: Restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  interactableColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
