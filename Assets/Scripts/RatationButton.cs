@@ -15,6 +15,7 @@ public class RatationButton : MonoBehaviour, IInteractable, ILookAtHandler
     }
     public void Interact()
     {
+        GetComponent<AudioSource>().Play();
         _onInteract.Invoke();
     }
 
