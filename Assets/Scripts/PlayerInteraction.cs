@@ -7,7 +7,7 @@ public class PlayerInteraction : MonoBehaviour
     
     [SerializeField] private float _interactionDistance;
     [SerializeField] private LayerMask _layers;
-    
+    private ILookAtHandler currentLookTarget;
     private void OnEnable()
     {
         InputManager.Instance.OnInteract += HandleInteract;
@@ -18,6 +18,35 @@ public class PlayerInteraction : MonoBehaviour
         InputManager.Instance.OnInteract -= HandleInteract;
     }
 
+    void Update()
+    {
+        Ray ray = new Ray(_head.transform.position, _head.transform.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, _interactionDistance))
+        {
+            ILookAtHandler lookTarget = hit.collider.GetComponent<ILookAtHandler>();
+
+            if (lookTarget != null)
+            {
+                if (lookTarget != currentLookTarget)
+                {
+                    currentLookTarget?.OnLookExit();
+                    currentLookTarget = lookTarget;
+                    currentLookTarget.OnLookEnter();
+                }
+            }
+            else
+            {
+                currentLookTarget?.OnLookExit();
+                currentLookTarget = null;
+            }
+        }
+        else
+        {
+            currentLookTarget?.OnLookExit();
+            currentLookTarget = null;
+        }
+    }
+    
     private void HandleInteract(InputAction.CallbackContext ctx)
     {
         // Hacemos un raycast desde la cámara del jugador
