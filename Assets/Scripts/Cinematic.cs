@@ -37,7 +37,7 @@ public class Cinematic : MonoBehaviour
         // _whiteScreen.gameObject.SetActive(false);
 
         // EJEMPLO Post‑fade:
-        SceneManager.LoadScene("TestRotacion 1");
+        SceneManager.LoadScene("Game");
     }
 
     private IEnumerator FadeAlpha(float from, float to, float duration)

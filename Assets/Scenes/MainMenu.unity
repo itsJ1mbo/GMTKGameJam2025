@@ -1089,9 +1089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 1190996269}
   _whiteScreen: {fileID: 631383759}
-  _initialDelay: 3
-  _fadeDuration: 1.2
-  _holdWhite: 0.5
+  _initialDelay: 1.78
+  _fadeDuration: 0
+  _holdWhite: 0
 --- !u!4 &2145885285
 Transform:
   m_ObjectHideFlags: 0
@@ -1115,17 +1115,105 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 601560523776936019, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 751586132735048781, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 754701867592531396, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
     - target: {fileID: 975903452471652299, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: rotateClockwise
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2378585216743228342, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2513349891340344410, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2762521245903152746, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2993103991527106252, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994449919840106784, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191772794709933645, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: _restrictRotations
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3263773281701968381, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3611418469021755443, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 3710168718819434501, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 4110102389678608255, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
     - target: {fileID: 4572336185784825357, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: m_Name
       value: Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 6428412449697660638, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6443245700542684625, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6476952212002091878, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6780790610904104538, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877215698811828660, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914273725076273204, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930444800454316317, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015807900888194904, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7184407248436150260, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
       objectReference: {fileID: 0}
     - target: {fileID: 7529698637128461365, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1166,6 +1254,26 @@ PrefabInstance:
     - target: {fileID: 7529698637128461365, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8139367848392950910, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8167318865179626320, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8668766117861948235, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685214237016090533, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
+      objectReference: {fileID: 0}
+    - target: {fileID: 8785387408754262539, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: m_TagString
+      value: Cubie
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
