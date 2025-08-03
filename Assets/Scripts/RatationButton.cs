@@ -9,25 +9,34 @@ public class RatationButton : MonoBehaviour, IInteractable, ILookAtHandler
     [SerializeField]
     private Color interactableColor;
     private Color matColor;
+
+    [SerializeField] private bool highlight = true;
     void Start()
     {
         matColor = GetComponentInChildren<MeshRenderer>().material.GetColor("_Color");
     }
     public void Interact()
     {
-        GetComponent<AudioSource>().Play();
+        if(GetComponent<AudioSource>())
+            GetComponent<AudioSource>().Play();
         _onInteract.Invoke();
     }
 
     public void OnLookEnter()
     {
-        GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", interactableColor);
-        GetComponentInChildren<SkinnedMeshRenderer>().material.SetColor("_Color", interactableColor);
+        if (highlight)
+        { 
+            GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", interactableColor); 
+            GetComponentInChildren<SkinnedMeshRenderer>().material.SetColor("_Color", interactableColor);
+        }
     }
 
     public void OnLookExit()
     {
-        GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", matColor);
-        GetComponentInChildren<SkinnedMeshRenderer>().material.SetColor("_Color", matColor);
+        if (highlight)
+        { 
+            GetComponentInChildren<MeshRenderer>().material.SetColor("_Color", matColor);
+            GetComponentInChildren<SkinnedMeshRenderer>()?.material.SetColor("_Color", matColor);
+        }
     }
 }
