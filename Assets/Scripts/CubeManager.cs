@@ -1,42 +1,45 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Eje lógico para las capas: X (izq‑der), Y (arriba‑abajo), Z (front‑back).
+/// Eje lógico para las capas: X (izq-der), Y (arriba-abajo), Z (front-back).
 /// </summary>
 public enum Axis { X, Y, Z }
 
 public class CubeManager : MonoBehaviour
 {
+    [Header("Configuración de lockeo")]
     [SerializeField] private bool _restrictRotations = true;
     private bool cubeRotating = false;
+
+    [Header("Velocidad de giro (grados/seg)")]
+    [SerializeField] private float turnSpeed = 270f;
+    
+    [Header("Tag que identifica a cada cubie")]
+    [SerializeField] private string cubieTag = "Cubie";
 
     // Lista interna para cada cubie con referencia a Transform + coordenadas lógicas
     private readonly List<Cubie> cubies = new List<Cubie>();
 
-    // Ajusta si deseas que poste turno sea más lento o rápido (deg/s)
-    [SerializeField] private float turnSpeed = 270f;
-
     private void Awake()
     {
-        // Al principio se asume que todos los cubies están como hijos directos.
-        foreach (Transform t in transform)
+        foreach (Transform child in transform)
         {
-            Vector3Int coord = RoundCoord(t.localPosition);
-            cubies.Add(new Cubie { tr = t, coord = coord });
+            if (child.CompareTag(cubieTag))
+            {
+                Vector3Int coord = RoundCoord(child.localPosition);
+                cubies.Add(new Cubie { tr = child, coord = coord });
+            }
         }
     }
 
     public bool isCubeRotating() => cubeRotating && _restrictRotations;
-    public void setCubeRotation(bool onoff) { cubeRotating = onoff; }
+    public void setCubeRotation(bool onoff) => cubeRotating = onoff;
 
     /// <summary>
-    /// Invoca una rotación de 90° sobre cualquier capa.
-    /// layerIndex: -1, 0, +1 según corresponda en el axis.
-    /// axis: el eje del slice (X/Y/Z).
-    /// clockwise: true = +90° (CW al observador).
+    /// Gira 90° el slice definido por (axis, layerIndex).
+    /// layerIndex ∈ {-1, 0, +1}. clockwise=true → +90°.
     /// </summary>
     public void RotateSlice(Axis axis, int layerIndex, bool clockwise)
     {
@@ -47,76 +50,92 @@ public class CubeManager : MonoBehaviour
     private IEnumerator RotateSliceRoutine(Axis axis, int layerIndex, bool clockwise)
     {
         cubeRotating = true;
-        Debug.Log("Rotating slice " + name);
-        List<Transform> slice = FilterSlice(axis, layerIndex);
-        GameObject pivot = new GameObject($"SlicePivot_{axis}{layerIndex}");
-        pivot.transform.SetParent(transform, worldPositionStays: true);
+
+        // 1) Filtramos cubies que pertenecen al slice por su coord
+        var slice = new List<Transform>();
+        foreach (var c in cubies)
+        {
+            int v = axis == Axis.X ? c.coord.x
+                  : axis == Axis.Y ? c.coord.y
+                  : /*Z*/            c.coord.z;
+            if (v == layerIndex) 
+                slice.Add(c.tr);
+        }
+
+        if (slice.Count == 0)
+        {
+            Debug.LogWarning($"Slice vacío: {axis}={layerIndex}");
+            cubeRotating = false;
+            yield break;
+        }
+
+        // 2) Creamos un pivot vacío en el centro del cubo
+        var pivot = new GameObject($"Pivot_{axis}{layerIndex}");
+        pivot.transform.SetParent(transform, false);        // sin mover worldPos
         pivot.transform.localPosition = Vector3.zero;
         pivot.transform.localRotation = Quaternion.identity;
 
-        foreach (var t in slice) t.SetParent(pivot.transform, worldPositionStays: true);
+        // 3) Parentamos los cubies al pivot (manteniendo su posición mundial)
+        foreach (var t in slice)
+            t.SetParent(pivot.transform, true);
 
-        Vector3 rotAxis = axis switch
-        {
-            Axis.X => Vector3.right,
-            Axis.Y => Vector3.up,
-            Axis.Z => Vector3.forward,
-            _ => Vector3.up
-        };
-
+        // 4) Preparamos Slerp
+        Vector3 rotAxis = axis == Axis.X ? Vector3.right
+                         : axis == Axis.Y ? Vector3.up
+                         : Vector3.forward;
         float targetAngle = clockwise ? 90f : -90f;
-        float rotated = 0f;
+        Quaternion startRot = pivot.transform.rotation;
+        Quaternion endRot   = startRot * Quaternion.AngleAxis(targetAngle, rotAxis);
+        float duration = Mathf.Abs(targetAngle) / turnSpeed;
+        float elapsed = 0f;
 
-        while (Mathf.Abs(rotated) < 0.9999f * Mathf.Abs(targetAngle))
+        // 5) Ejecutamos Lerp en el tiempo dado
+        while (elapsed < duration)
         {
-            float step = Mathf.Sign(targetAngle) * turnSpeed * Time.deltaTime;
-            if (Mathf.Abs(rotated + step) > Mathf.Abs(targetAngle))
-                step = targetAngle - rotated;
-
-            pivot.transform.Rotate(rotAxis, step, Space.Self);
-            rotated += step;
+            elapsed += Time.deltaTime;
+            float t = Mathf.Clamp01(elapsed / duration);
+            pivot.transform.rotation = Quaternion.Slerp(startRot, endRot, t);
             yield return null;
         }
 
-        // Snap final exacto
-        pivot.transform.localRotation =
-            Quaternion.AngleAxis(targetAngle, rotAxis) * pivot.transform.localRotation;
+        // 6) Aseguramos snap exacto
+        pivot.transform.rotation = endRot;
 
-        foreach (var t in slice) t.SetParent(transform, worldPositionStays: true);
+        // 7) Re-parentamos los cubies de vuelta al root
+        foreach (var t in slice)
+            t.SetParent(transform, true);
+
         Destroy(pivot);
 
-        // Recalcular coordenadas lógicas
-        foreach (var c in cubies) c.coord = RoundCoord(c.tr.localPosition);
+        // 8) Snap final de posiciones locales y recalcular coords
+        foreach (var c in cubies)
+        {
+            // Redondear a -1,0,1
+            Vector3 lp = c.tr.localPosition;
+            lp.x = Mathf.Round(lp.x);
+            lp.y = Mathf.Round(lp.y);
+            lp.z = Mathf.Round(lp.z);
+            c.tr.localPosition = lp;
+            c.coord = RoundCoord(lp);
+        }
 
         cubeRotating = false;
     }
 
-    private Vector3Int RoundCoord(Vector3 localPos)
+    // Convierte cualquier Vector3 cercano a enteros en Vector3Int
+    private Vector3Int RoundCoord(Vector3 v)
     {
-        // Redondeo cercano a -1, 0 o +1 (inclusivo para futuros cubos más grandes)
         return new Vector3Int(
-            Mathf.RoundToInt(localPos.x),
-            Mathf.RoundToInt(localPos.y),
-            Mathf.RoundToInt(localPos.z)
+            Mathf.RoundToInt(v.x),
+            Mathf.RoundToInt(v.y),
+            Mathf.RoundToInt(v.z)
         );
     }
 
-    private List<Transform> FilterSlice(Axis axis, int layerIndex)
+    // Clase interna ligera para trackear Transform + su coord lógica
+    private class Cubie
     {
-        var list = new List<Transform>(9);
-        foreach (var c in cubies)
-        {
-            int val = axis switch
-            {
-                Axis.X => c.coord.x,
-                Axis.Y => c.coord.y,
-                Axis.Z => c.coord.z,
-                _ => 0
-            };
-            if (val == layerIndex) list.Add(c.tr);
-        }
-        return list;
+        public Transform    tr;
+        public Vector3Int   coord;
     }
-
-    private class Cubie { public Transform tr; public Vector3Int coord; }
 }
