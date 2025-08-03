@@ -41,6 +41,8 @@ public class CubeManager : MonoBehaviour
     public void RotateSlice(Axis axis, int layerIndex, bool clockwise)
     {
         if (cubeRotating && _restrictRotations) return;
+        if(GetComponent<AudioSource>())
+            GetComponent<AudioSource>().Play();
         StartCoroutine(RotateSliceRoutine(axis, layerIndex, clockwise));
     }
 
@@ -113,6 +115,8 @@ public class CubeManager : MonoBehaviour
             lp.z = Mathf.Round(lp.z);
             c.tr.localPosition = lp;
             c.coord = RoundCoord(lp);
+            if(GetComponent<AudioSource>())
+                GetComponent<AudioSource>().Stop();
         }
 
         cubeRotating = false;
