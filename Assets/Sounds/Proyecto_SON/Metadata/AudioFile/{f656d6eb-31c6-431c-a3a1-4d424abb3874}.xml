@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{f656d6eb-31c6-431c-a3a1-4d424abb3874}">
+		<property name="assetPath">
+			<value>stone-slide-sounds-effects.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.752</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52c67cf4-8368-41e5-8612-70ca45e4651a}</destination>
+		</relationship>
+	</object>
+</objects>

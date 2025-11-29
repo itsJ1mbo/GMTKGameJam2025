@@ -1,6 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using FMOD.Studio;
+using FMODUnity;
 using UnityEngine;
+using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 /// <summary>
 /// Eje lógico para las capas: X (izq-der), Y (arriba-abajo), Z (front-back).
@@ -22,6 +26,11 @@ public class CubeManager : MonoBehaviour
     // Lista interna para cada cubie con referencia a Transform + coordenadas lógicas
     private readonly List<Cubie> cubies = new List<Cubie>();
 
+    [Header("Sonido")]
+    [SerializeField] private bool makeSound = false;
+    [SerializeField] private EventReference sound;
+    private EventInstance eventInstance;
+
     private void Awake()
     {
         foreach (Transform child in transform)
@@ -34,6 +43,12 @@ public class CubeManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        eventInstance = RuntimeManager.CreateInstance(sound);
+        eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
+    }
+
     /// <summary>
     /// Gira 90° el slice definido por (axis, layerIndex).
     /// layerIndex ∈ {-1, 0, +1}. clockwise=true → +90°.
@@ -41,8 +56,10 @@ public class CubeManager : MonoBehaviour
     public void RotateSlice(Axis axis, int layerIndex, bool clockwise)
     {
         if (cubeRotating && _restrictRotations) return;
-        if(GetComponent<AudioSource>())
-            GetComponent<AudioSource>().Play();
+        if(makeSound)
+        {
+            eventInstance.start();
+        }
         StartCoroutine(RotateSliceRoutine(axis, layerIndex, clockwise));
     }
 
@@ -115,10 +132,9 @@ public class CubeManager : MonoBehaviour
             lp.z = Mathf.Round(lp.z);
             c.tr.localPosition = lp;
             c.coord = RoundCoord(lp);
-            if(GetComponent<AudioSource>())
-                GetComponent<AudioSource>().Stop();
         }
 
+        eventInstance.stop(STOP_MODE.IMMEDIATE);
         cubeRotating = false;
     }
 
