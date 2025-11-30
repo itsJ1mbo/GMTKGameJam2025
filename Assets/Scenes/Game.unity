@@ -404,6 +404,30 @@ PrefabInstance:
       propertyPath: rotationSound.Guid.Data4
       value: -1399058202
       objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: delay
+      value: 8.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: restartSound.Path
+      value: event:/Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: restartSound.Guid.Data1
+      value: 1022365277
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: restartSound.Guid.Data2
+      value: 1173887669
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: restartSound.Guid.Data3
+      value: 1402558134
+      objectReference: {fileID: 0}
+    - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: restartSound.Guid.Data4
+      value: -1081879013
+      objectReference: {fileID: 0}
     - target: {fileID: 7602176427180283828, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: m_Name
       value: Player

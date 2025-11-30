@@ -1162,8 +1162,48 @@ PrefabInstance:
       value: Cubie
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: endSound.Path
+      value: event:/FinGiro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: _restrictRotations
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: rotationSound.Path
+      value: event:/Giro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: endSound.Guid.Data1
+      value: 1974876973
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: endSound.Guid.Data2
+      value: 1094500675
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: endSound.Guid.Data3
+      value: 1077589664
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: endSound.Guid.Data4
+      value: -1793850088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: rotationSound.Guid.Data1
+      value: -288319524
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: rotationSound.Guid.Data2
+      value: 1308376477
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: rotationSound.Guid.Data3
+      value: 1224518027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: rotationSound.Guid.Data4
+      value: -1399058202
       objectReference: {fileID: 0}
     - target: {fileID: 3263773281701968381, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: m_TagString

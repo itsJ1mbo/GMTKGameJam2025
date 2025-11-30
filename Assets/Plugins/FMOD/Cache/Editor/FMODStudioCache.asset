@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639000682539080964
+  lastModified: 639001137378330264
   FileSizes:
   - Name: Desktop
     Value: 1074
@@ -63,11 +63,39 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Interaction.bank
   Name: Interaction
   StudioPath: bank:/Interaction
-  lastModified: 639000682539257260
+  lastModified: 639001137378310253
   FileSizes:
   - Name: Desktop
-    Value: 5728
+    Value: 103328
   Exists: 1
+--- !u!114 &-7618071523449124308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GiroMenu
+  m_EditorClassIdentifier: 
+  Path: event:/GiroMenu
+  Guid:
+    Data1: -1109112508
+    Data2: 1246951252
+    Data3: 1072930722
+    Data4: -1416117757
+  Banks:
+  - {fileID: 8715079362112828671}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 3772651183507745056}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 32000
 --- !u!114 &-5511774030659168289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83,7 +111,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Outside.bank
   Name: Outside
   StudioPath: bank:/Outside
-  lastModified: 639000682524616831
+  lastModified: 639001025820355876
   FileSizes:
   - Name: Desktop
     Value: 281664
@@ -103,7 +131,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Cube.bank
   Name: Cube
   StudioPath: bank:/Cube
-  lastModified: 639000682509192264
+  lastModified: 639001024893384702
   FileSizes:
   - Name: Desktop
     Value: 135552
@@ -150,10 +178,10 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639000682539096049
+  lastModified: 639001137378340264
   FileSizes:
   - Name: Desktop
-    Value: 1118
+    Value: 1410
   Exists: 1
 --- !u!114 &-929034512215928587
 MonoBehaviour:
@@ -183,6 +211,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 50
   Length: 1380
+--- !u!114 &-557533778051754661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MapOpen
+  m_EditorClassIdentifier: 
+  Path: event:/MapOpen
+  Guid:
+    Data1: 1892677811
+    Data2: 1130350845
+    Data3: 188782502
+    Data4: -1936748022
+  Banks:
+  - {fileID: -7619243851650074131}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1108
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,19 +257,25 @@ MonoBehaviour:
   - {fileID: -5511774030659168289}
   - {fileID: -7619243851650074131}
   - {fileID: -5193928443754977335}
+  - {fileID: 8715079362112828671}
+  - {fileID: 5984069068341682846}
   EditorEvents:
   - {fileID: -929034512215928587}
   - {fileID: 4173368057592559087}
   - {fileID: -3687136134587187249}
   - {fileID: 903067194183277852}
   - {fileID: -7817548451527287382}
+  - {fileID: -7618071523449124308}
+  - {fileID: -557533778051754661}
+  - {fileID: 6799637495609582866}
+  - {fileID: 1215679929186650446}
   EditorParameters: []
   MasterBanks:
   - {fileID: -7901696379294990295}
   StringsBanks:
   - {fileID: -1021771026524428624}
   cacheVersion: 131857
-  cacheTime: 639000682539257260
+  cacheTime: 639001137378340264
   SerializableEventsDict:
   - key: event:/Giro
     index: 0
@@ -226,6 +287,14 @@ MonoBehaviour:
     index: 3
   - key: event:/Barks
     index: 4
+  - key: event:/GiroMenu
+    index: 5
+  - key: event:/MapOpen
+    index: 6
+  - key: event:/Pasos
+    index: 7
+  - key: event:/Restart
+    index: 8
 --- !u!114 &832239631092083789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -241,7 +310,7 @@ MonoBehaviour:
   Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Movimientos.bank
   Name: Movimientos
   StudioPath: bank:/Movimientos
-  lastModified: 639000646684754677
+  lastModified: 639001004613587611
   FileSizes:
   - Name: Desktop
     Value: 43552
@@ -273,6 +342,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 365
+--- !u!114 &1215679929186650446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Restart
+  m_EditorClassIdentifier: 
+  Path: event:/Restart
+  Guid:
+    Data1: 1022365277
+    Data2: 1173887669
+    Data3: 1402558134
+    Data4: -1081879013
+  Banks:
+  - {fileID: -7619243851650074131}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 8254
 --- !u!114 &3221384506163006514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -296,6 +392,33 @@ MonoBehaviour:
   Type: 1
   IsGlobal: 0
   Labels: []
+  Exists: 1
+--- !u!114 &3772651183507745056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GiroMenu/Rubik
+  m_EditorClassIdentifier: 
+  Name: Rubik
+  StudioPath: 
+  Min: 0
+  Max: 2
+  Default: 0
+  ID:
+    data1: 3134423436
+    data2: 1912168827
+  Type: 2
+  IsGlobal: 0
+  Labels:
+  - RubikA
+  - RubikB
+  - RubikC
   Exists: 1
 --- !u!114 &4173368057592559087
 MonoBehaviour:
@@ -325,3 +448,70 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 50
   Length: 600
+--- !u!114 &5984069068341682846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Player.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sounds/Proyecto_SON/Build/Desktop/Player.bank
+  Name: Player
+  StudioPath: bank:/Player
+  lastModified: 639001107275940874
+  FileSizes:
+  - Name: Desktop
+    Value: 8576
+  Exists: 1
+--- !u!114 &6799637495609582866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Pasos
+  m_EditorClassIdentifier: 
+  Path: event:/Pasos
+  Guid:
+    Data1: -268084068
+    Data2: 1285476691
+    Data3: -1187635810
+    Data4: 1043819896
+  Banks:
+  - {fileID: 5984069068341682846}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 500
+--- !u!114 &8715079362112828671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MainMenu.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/Sounds/Proyecto_SON/Build/Desktop/MainMenu.bank
+  Name: MainMenu
+  StudioPath: bank:/MainMenu
+  lastModified: 639001024955463605
+  FileSizes:
+  - Name: Desktop
+    Value: 911936
+  Exists: 1

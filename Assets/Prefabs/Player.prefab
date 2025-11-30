@@ -311,6 +311,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _headTr: {fileID: 3796285897428560142}
   _speed: 10
+  footstepSound:
+    Guid:
+      Data1: -268084068
+      Data2: 1285476691
+      Data3: -1187635810
+      Data4: 1043819896
+    Path: event:/Pasos
+  stepInterval: 0.5
 --- !u!136 &5430282166831067413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -364,6 +372,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mapPos: {fileID: 3313826838579828178}
+  _mapOpenSound:
+    Guid:
+      Data1: 1892677811
+      Data2: 1130350845
+      Data3: 188782502
+      Data4: -1936748022
+    Path: event:/MapOpen
 --- !u!114 &5167126807939049128
 MonoBehaviour:
   m_ObjectHideFlags: 0
