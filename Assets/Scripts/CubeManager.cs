@@ -33,6 +33,8 @@ public class CubeManager : MonoBehaviour
     [SerializeField] private EventReference rotationSound;
     [SerializeField] private EventReference endSound;
     private EventInstance eventInstance;
+    [SerializeField] private EventReference miniMapSound; 
+    [SerializeField] private PlayerMap playerMapComponent;
 
     private void Awake()
     {
@@ -62,6 +64,14 @@ public class CubeManager : MonoBehaviour
         if(makeSound)
         {
             eventInstance.start();
+        }
+
+        if (playerMapComponent != null && playerMapComponent.IsMapOpen)
+        {
+            if (!miniMapSound.IsNull)
+            {
+                RuntimeManager.PlayOneShot(miniMapSound);
+            }
         }
         StartCoroutine(RotateSliceRoutine(axis, layerIndex, clockwise));
     }

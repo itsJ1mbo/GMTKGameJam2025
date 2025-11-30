@@ -376,6 +376,17 @@ Transform:
   - {fileID: 1641068217}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &274371419 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3961438366650691962, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+  m_PrefabInstance: {fileID: 403848173}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99b8d5be34e50d4d8d7bde2d19914bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &403848173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1184,6 +1195,14 @@ PrefabInstance:
       value: event:/FinGiro
       objectReference: {fileID: 0}
     - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: miniMapSound.Path
+      value: event:/MapActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: playerMapComponent
+      value: 
+      objectReference: {fileID: 274371419}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
       propertyPath: rotationSound.Path
       value: event:/Giro
       objectReference: {fileID: 0}
@@ -1202,6 +1221,22 @@ PrefabInstance:
     - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
       propertyPath: endSound.Guid.Data4
       value: -1793850088
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: miniMapSound.Guid.Data1
+      value: -805139340
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: miniMapSound.Guid.Data2
+      value: 1183384879
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: miniMapSound.Guid.Data3
+      value: -695771209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
+      propertyPath: miniMapSound.Guid.Data4
+      value: -559798987
       objectReference: {fileID: 0}
     - target: {fileID: 6660599707016879266, guid: 8e806da7f1a22474395a1e7448c5e544, type: 3}
       propertyPath: rotationSound.Guid.Data1

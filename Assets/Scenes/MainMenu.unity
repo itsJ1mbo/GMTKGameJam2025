@@ -1166,6 +1166,10 @@ PrefabInstance:
       value: event:/FinGiro
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: miniMapSound.Path
+      value: event:/MapActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: _restrictRotations
       value: 0
       objectReference: {fileID: 0}
@@ -1188,6 +1192,22 @@ PrefabInstance:
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: endSound.Guid.Data4
       value: -1793850088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: miniMapSound.Guid.Data1
+      value: -805139340
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: miniMapSound.Guid.Data2
+      value: 1183384879
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: miniMapSound.Guid.Data3
+      value: -695771209
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
+      propertyPath: miniMapSound.Guid.Data4
+      value: -559798987
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: rotationSound.Guid.Data1

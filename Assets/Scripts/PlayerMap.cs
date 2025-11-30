@@ -12,6 +12,11 @@ public class PlayerMap : MonoBehaviour
     [SerializeField] private EventReference _mapOpenSound;
     private bool _isMapOpen = false;
 
+    public bool IsMapOpen
+    {
+        get { return _isMapOpen; }
+    }
+
     private void OnUseMap(InputAction.CallbackContext context)
     {
 
