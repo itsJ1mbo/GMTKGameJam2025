@@ -1,3 +1,4 @@
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -10,6 +11,8 @@ public class RatationButton : MonoBehaviour, IInteractable, ILookAtHandler
     private Color interactableColor;
     private Color matColor;
 
+    [SerializeField] private EventReference sound;
+
     [SerializeField] private bool highlight = true;
     void Start()
     {
@@ -17,8 +20,7 @@ public class RatationButton : MonoBehaviour, IInteractable, ILookAtHandler
     }
     public void Interact()
     {
-        if(GetComponent<AudioSource>())
-            GetComponent<AudioSource>().Play();
+        RuntimeManager.PlayOneShot(sound, transform.position);
         _onInteract.Invoke();
     }
 

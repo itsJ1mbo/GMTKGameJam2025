@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{69dce34d-342b-453a-bbab-3aab37c606a7}">
+		<property name="assetPath">
+			<value>418108__crazymonke9__dog-tripple-bark.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.8031746031746032</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52c67cf4-8368-41e5-8612-70ca45e4651a}</destination>
+		</relationship>
+	</object>
+</objects>

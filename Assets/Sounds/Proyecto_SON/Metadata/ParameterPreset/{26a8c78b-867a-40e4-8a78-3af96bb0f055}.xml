@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{26a8c78b-867a-40e4-8a78-3af96bb0f055}">
+		<property name="name">
+			<value>Bark Frequency</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b9da5031-74bc-4904-b101-ad0af82587d3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3d8860da-3d7b-46f1-be7d-63a9eddd7f07}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3d8860da-3d7b-46f1-be7d-63a9eddd7f07}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="minimum">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

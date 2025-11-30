@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{a44aaccd-61e0-41de-aedb-e102d27b289a}">
+		<property name="name">
+			<value>Rubik</value>
+		</property>
+		<relationship name="folder">
+			<destination>{b9da5031-74bc-4904-b101-ad0af82587d3}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{27e3f9c8-7c8f-4067-b2e5-af1c20889b49}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{27e3f9c8-7c8f-4067-b2e5-af1c20889b49}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>3</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>RubikA</value>
+			<value>RubikB</value>
+			<value>RubikC</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>

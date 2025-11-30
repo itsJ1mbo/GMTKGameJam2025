@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using FMOD.Studio;
 using FMODUnity;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using STOP_MODE = FMOD.Studio.STOP_MODE;
 
 /// <summary>
@@ -28,7 +30,8 @@ public class CubeManager : MonoBehaviour
 
     [Header("Sonido")]
     [SerializeField] private bool makeSound = false;
-    [SerializeField] private EventReference sound;
+    [SerializeField] private EventReference rotationSound;
+    [SerializeField] private EventReference endSound;
     private EventInstance eventInstance;
 
     private void Awake()
@@ -45,7 +48,7 @@ public class CubeManager : MonoBehaviour
 
     private void Start()
     {
-        eventInstance = RuntimeManager.CreateInstance(sound);
+        eventInstance = RuntimeManager.CreateInstance(rotationSound);
         eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
     }
 
@@ -135,6 +138,8 @@ public class CubeManager : MonoBehaviour
         }
 
         eventInstance.stop(STOP_MODE.IMMEDIATE);
+        RuntimeManager.PlayOneShot(endSound, transform.position);
+        
         cubeRotating = false;
     }
 
