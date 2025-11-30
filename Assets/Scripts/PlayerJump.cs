@@ -8,7 +8,7 @@ public class PlayerJump : MonoBehaviour
     private CharacterController _controller;
     private Vector3 _velocity;
     private bool _jumpInput;
-    private bool _isGrounded;
+    public bool IsGrounded { get; private set; }
 
     [SerializeField] private float _jumpHeight = 2f;
     [SerializeField] private float _gravity = -9.81f;
@@ -39,12 +39,12 @@ public class PlayerJump : MonoBehaviour
 
     private void Update()
     {
-        if (_isGrounded && _velocity.y < 0f)
+        if (IsGrounded && _velocity.y < 0f)
         {
             _velocity.y = -2f;
         }
         
-        if (_jumpInput && _isGrounded)
+        if (_jumpInput && IsGrounded)
         {
             _velocity.y = Mathf.Sqrt(_jumpHeight * -2f * _gravity * _gravityScale);
         }
@@ -55,6 +55,6 @@ public class PlayerJump : MonoBehaviour
 
         _controller.Move(_velocity * Time.deltaTime);
         
-        _isGrounded = Physics.CheckBox(_feet.position, new Vector3(0.25f, 0.1f, 0.25f), _feet.rotation, _groundMask);
+        IsGrounded = Physics.CheckBox(_feet.position, new Vector3(0.25f, 0.1f, 0.25f), _feet.rotation, _groundMask);
     }
 }

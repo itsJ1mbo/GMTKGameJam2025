@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{4a635e51-0cb7-4bb0-ac73-ff99ebc84edf}">
+		<property name="assetPath">
+			<value>406749__kretopi__steponwood-016.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.62406249999999996</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52c67cf4-8368-41e5-8612-70ca45e4651a}</destination>
+		</relationship>
+	</object>
+</objects>
