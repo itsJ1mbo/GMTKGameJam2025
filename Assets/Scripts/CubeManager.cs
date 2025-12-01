@@ -32,9 +32,9 @@ public class CubeManager : MonoBehaviour
     [SerializeField] private bool makeSound = false;
     [SerializeField] private EventReference rotationSound;
     [SerializeField] private EventReference endSound;
-    private EventInstance eventInstance;
-    [SerializeField] private EventReference miniMapSound; 
-    [SerializeField] private PlayerMap playerMapComponent;
+    private EventInstance cubeInstance;
+    
+    [SerializeField] private PlayerMap _playerMap;
 
     private void Awake()
     {
@@ -50,8 +50,8 @@ public class CubeManager : MonoBehaviour
 
     private void Start()
     {
-        eventInstance = RuntimeManager.CreateInstance(rotationSound);
-        eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
+        cubeInstance = RuntimeManager.CreateInstance(rotationSound);
+        cubeInstance.set3DAttributes(RuntimeUtils.To3DAttributes(transform.position));
     }
 
     /// <summary>
@@ -63,16 +63,10 @@ public class CubeManager : MonoBehaviour
         if (cubeRotating && _restrictRotations) return;
         if(makeSound)
         {
-            eventInstance.start();
+            if(!_playerMap || _playerMap.IsMapOpen)
+                cubeInstance.start();
         }
 
-        if (playerMapComponent != null && playerMapComponent.IsMapOpen)
-        {
-            if (!miniMapSound.IsNull)
-            {
-                RuntimeManager.PlayOneShot(miniMapSound);
-            }
-        }
         StartCoroutine(RotateSliceRoutine(axis, layerIndex, clockwise));
     }
 
@@ -147,8 +141,11 @@ public class CubeManager : MonoBehaviour
             c.coord = RoundCoord(lp);
         }
 
-        eventInstance.stop(STOP_MODE.IMMEDIATE);
-        RuntimeManager.PlayOneShot(endSound, transform.position);
+        if(makeSound)
+        {
+            cubeInstance.stop(STOP_MODE.IMMEDIATE);
+            if (!endSound.IsNull) RuntimeManager.PlayOneShot(endSound, transform.position);
+        }
         
         cubeRotating = false;
     }

@@ -489,6 +489,14 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: makeSound
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: _playerMap
+      value: 
+      objectReference: {fileID: 274371419}
+    - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: sound.Path
       value: event:/Giro
       objectReference: {fileID: 0}
@@ -514,7 +522,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: rotationSound.Path
-      value: event:/Giro
+      value: event:/Interaction/MapActive
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: endSound.Guid.Data1
@@ -534,19 +542,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: rotationSound.Guid.Data1
-      value: -288319524
+      value: -805139340
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: rotationSound.Guid.Data2
-      value: 1308376477
+      value: 1183384879
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: rotationSound.Guid.Data3
-      value: 1224518027
+      value: -695771209
       objectReference: {fileID: 0}
     - target: {fileID: 2914976750317716950, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: rotationSound.Guid.Data4
-      value: -1399058202
+      value: -559798987
       objectReference: {fileID: 0}
     - target: {fileID: 3743111615201051146, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: _speed
@@ -563,6 +571,14 @@ PrefabInstance:
     - target: {fileID: 3743111615201051146, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: stepInterval
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743111615201051146, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: footstepSound.Path
+      value: event:/Player/Pasos
+      objectReference: {fileID: 0}
+    - target: {fileID: 3961438366650691962, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
+      propertyPath: _mapOpenSound.Path
+      value: event:/Interaction/MapOpen
       objectReference: {fileID: 0}
     - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: delay
@@ -582,7 +598,7 @@ PrefabInstance:
       objectReference: {fileID: 1822597134}
     - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: restartSound.Path
-      value: event:/Restart
+      value: event:/Interaction/Restart
       objectReference: {fileID: 0}
     - target: {fileID: 5023953661106093560, guid: 943e814cfb2c44e40ad81a37d2ae2452, type: 3}
       propertyPath: restartSound.Guid.Data1
@@ -1610,7 +1626,7 @@ MonoBehaviour:
       Data2: 1247851815
       Data3: -1895255149
       Data4: -709535013
-    Path: event:/Void
+    Path: event:/Outside/Void
   Event: 
   EventPlayTrigger: 1
   EventStopTrigger: 2

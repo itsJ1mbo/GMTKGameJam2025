@@ -173,6 +173,13 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   interactableColor: {r: 0, g: 0, b: 0, a: 0}
+  sound:
+    Guid:
+      Data1: -1272862384
+      Data2: 1266314162
+      Data3: 1175015077
+      Data4: -1323978931
+    Path: event:/Cube/Barks
   highlight: 0
 --- !u!114 &8022097620385269867
 MonoBehaviour:

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{3f4f94ec-9f83-4514-996a-c53aa17e11ab}">
+		<property name="assetPath">
+			<value>761332__aitf4__tv-switching-sound.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.3699773242630386</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{52c67cf4-8368-41e5-8612-70ca45e4651a}</destination>
+		</relationship>
+	</object>
+</objects>

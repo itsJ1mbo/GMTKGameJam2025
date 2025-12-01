@@ -81,7 +81,7 @@ MonoBehaviour:
       Data2: 1177976512
       Data3: -973523800
       Data4: -2025214640
-    Path: event:/Button
+    Path: event:/Interaction/Button
   highlight: 1
 --- !u!65 &6452048121606307686
 BoxCollider:
