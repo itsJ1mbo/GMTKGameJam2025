@@ -14,11 +14,19 @@ public class RestartComponent : MonoBehaviour
     [SerializeField] private float rectAnimDuration = 0.5f; // velocidad del efecto
     private bool isAnimatingRect = false;
 
+    private PlayerMovement _playerMovement;
+    private PlayerJump _playerJump;
+    private PlayerLook _playerLook;
+    [SerializeField] private GameObject _volume;
+
     private Camera _camera;
 
     private void Start()
     {
         _camera = Camera.main;
+        _playerMovement = GetComponent<PlayerMovement>();
+        _playerJump = GetComponent<PlayerJump>();
+        _playerLook = transform.GetChild(0).GetComponent<PlayerLook>();
     }
 
     private void OnEnable()
@@ -35,6 +43,11 @@ public class RestartComponent : MonoBehaviour
     {
         if (isRestarting || isAnimatingRect) return;
 
+        _volume.SetActive(true);
+        _playerLook.enabled = false;
+        _playerMovement.enabled = false;
+        _playerJump.enabled = false;
+        
         // Iniciar animación del rect
         StartCoroutine(AnimateViewportRect(
             new Rect(0.15f, 0.25f, 0.7f, 0.7f)
