@@ -261,6 +261,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Cube
+  - EndScene
   - Interaction
   - MainMenu
   - Movimientos

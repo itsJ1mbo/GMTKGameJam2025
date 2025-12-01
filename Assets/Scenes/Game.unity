@@ -1533,7 +1533,7 @@ MonoBehaviour:
       Data2: 1266314162
       Data3: 1175015077
       Data4: -1323978931
-    Path: event:/Barks
+    Path: event:/Cube/Barks
 --- !u!1 &1383543290
 GameObject:
   m_ObjectHideFlags: 0
