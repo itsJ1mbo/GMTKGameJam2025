@@ -19,6 +19,8 @@ public class RestartComponent : MonoBehaviour
     private PlayerLook _playerLook;
     [SerializeField] private GameObject _volume;
 
+    private FMOD.Studio.Bus _masterBus;
+
     private Camera _camera;
 
     private void Start()
@@ -27,6 +29,7 @@ public class RestartComponent : MonoBehaviour
         _playerMovement = GetComponent<PlayerMovement>();
         _playerJump = GetComponent<PlayerJump>();
         _playerLook = transform.GetChild(0).GetComponent<PlayerLook>();
+        _masterBus = RuntimeManager.GetBus("bus:/");
     }
 
     private void OnEnable()
@@ -106,6 +109,9 @@ public class RestartComponent : MonoBehaviour
         // Restaurar rect full screen antes de cargar escena
 
         yield return StartCoroutine(AnimateViewportRect(new Rect(0f, 0f, 1f, 1f)));
+        
+        // Detienes todos los eventos en ese bus inmediatamente
+        _masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.IMMEDIATE);
         
         SceneManager.LoadScene("Game");
     }

@@ -24,10 +24,14 @@ public class PlayerMap : MonoBehaviour
         {
             RuntimeManager.PlayOneShot(_mapOpenSound);
             _isMapOpen = true;
+            transform.DOMove(_mapPos.position, 1);
+            GameManager.Instance.SetMapState(true);
         }
+    }
 
-        transform.DOMove(_mapPos.position, 1);
-        GameManager.Instance.SetMapState(true);
+    private void OnDestroy()
+    {
+        GameManager.Instance.SetMapState(false);
     }
 
     private void OnEnable()
