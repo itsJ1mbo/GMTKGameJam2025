@@ -56,8 +56,8 @@ public class PlayerLook : MonoBehaviour
 
     private void Update()
     {
-        _rotationY += _mouseDelta.x * _sens * Time.deltaTime;
-        _rotationX -= _mouseDelta.y * _sens * Time.deltaTime;
+        _rotationY += _mouseDelta.x * _sens;
+        _rotationX -= _mouseDelta.y * _sens;
         _rotationX = Mathf.Clamp(_rotationX, -_clampAngle, _clampAngle);
         
         _tr.localRotation = Quaternion.Euler(_rotationX, _rotationY, 0f);

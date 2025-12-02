@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _headTr: {fileID: 3796285897428560142}
+  _feetTr: {fileID: 0}
   _speed: 10
   footstepSound:
     Guid:
@@ -317,8 +318,7 @@ MonoBehaviour:
       Data2: 1285476691
       Data3: -1187635810
       Data4: 1043819896
-    Path: event:/Pasos
-  stepInterval: 0.5
+    Path: event:/Player/Pasos
 --- !u!136 &5430282166831067413
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -410,6 +410,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6647cbfcf2fc58e468ef00bf79c27e2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  restartSound:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  delay: 8.2
+  rectAnimDuration: 0.5
+  _volume: {fileID: 0}
 --- !u!1001 &381234044625832412
 PrefabInstance:
   m_ObjectHideFlags: 0

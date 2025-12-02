@@ -1207,7 +1207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: endSound.Path
-      value: event:/FinGiro
+      value: event:/Cube/FinGiro
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: miniMapSound.Path
@@ -1219,7 +1219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: rotationSound.Path
-      value: event:/Giro
+      value: event:/Cube/Giro
       objectReference: {fileID: 0}
     - target: {fileID: 3260177041458236426, guid: cb1702c8515804b488247a7fe18fdebb, type: 3}
       propertyPath: endSound.Guid.Data1

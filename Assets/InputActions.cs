@@ -119,6 +119,15 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""Quit"",
+                    ""type"": ""Button"",
+                    ""id"": ""d7d998a4-c14b-4bf8-8618-60245cc44d76"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""852140f2-7766-474d-8707-702459ba45f3"",
@@ -158,7 +167,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Next"",
                     ""type"": ""Button"",
                     ""id"": ""b7230bb6-fc9b-4f52-8b25-f5e19cb2c2ba"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -167,7 +176,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Sprint"",
                     ""type"": ""Button"",
                     ""id"": ""641cd816-40e6-41b4-8c3d-04687c349290"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -347,6 +356,17 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""Restart"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2d14e595-ad71-4353-a119-102e9756b164"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Quit"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -1080,6 +1100,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Restart = m_Player.FindAction("Restart", throwIfNotFound: true);
+        m_Player_Quit = m_Player.FindAction("Quit", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
         m_Player_Map = m_Player.FindAction("Map", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
@@ -1182,6 +1203,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Restart;
+    private readonly InputAction m_Player_Quit;
     private readonly InputAction m_Player_Interact;
     private readonly InputAction m_Player_Map;
     private readonly InputAction m_Player_Jump;
@@ -1211,6 +1233,10 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Restart".
         /// </summary>
         public InputAction @Restart => m_Wrapper.m_Player_Restart;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/Quit".
+        /// </summary>
+        public InputAction @Quit => m_Wrapper.m_Player_Quit;
         /// <summary>
         /// Provides access to the underlying input action "Player/Interact".
         /// </summary>
@@ -1270,6 +1296,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Restart.started += instance.OnRestart;
             @Restart.performed += instance.OnRestart;
             @Restart.canceled += instance.OnRestart;
+            @Quit.started += instance.OnQuit;
+            @Quit.performed += instance.OnQuit;
+            @Quit.canceled += instance.OnQuit;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -1308,6 +1337,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @Restart.started -= instance.OnRestart;
             @Restart.performed -= instance.OnRestart;
             @Restart.canceled -= instance.OnRestart;
+            @Quit.started -= instance.OnQuit;
+            @Quit.performed -= instance.OnQuit;
+            @Quit.canceled -= instance.OnQuit;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -1647,6 +1679,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnRestart(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Quit" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnQuit(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>

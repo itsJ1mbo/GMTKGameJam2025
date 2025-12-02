@@ -175,11 +175,11 @@ MonoBehaviour:
   interactableColor: {r: 0, g: 0, b: 0, a: 0}
   sound:
     Guid:
-      Data1: -1272862384
-      Data2: 1266314162
-      Data3: 1175015077
-      Data4: -1323978931
-    Path: event:/Cube/Barks
+      Data1: 137863517
+      Data2: 1242864951
+      Data3: 1721275553
+      Data4: 1457178366
+    Path: event:/Interaction/Dog
   highlight: 0
 --- !u!114 &8022097620385269867
 MonoBehaviour:

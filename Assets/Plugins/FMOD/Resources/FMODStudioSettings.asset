@@ -264,7 +264,6 @@ MonoBehaviour:
   - EndScene
   - Interaction
   - MainMenu
-  - Movimientos
   - Outside
   - Player
   BanksToLoad: []

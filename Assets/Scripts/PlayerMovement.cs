@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         _controller = GetComponent<CharacterController>();   
         _jump = GetComponent<PlayerJump>();
         _eventInstance = RuntimeManager.CreateInstance(footstepSound);
+        _eventInstance.set3DAttributes(RuntimeUtils.To3DAttributes(_feetTr.position));
     }
     
     // Update is called once per frame
